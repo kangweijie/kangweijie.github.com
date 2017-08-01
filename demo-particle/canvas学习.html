@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+    <title>粒子漂浮</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+		body{background-color: #0c1328;position: absolute;left: 0;top: 0;right: 0;bottom: 0;}
+		a{color:#fff;}
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="848" height="900">您的浏览器不支持Canvas。</canvas>
+<script type="text/javascript">
+(function(){
+	var canvas = {},
+		image = {};
+	var particles = [];
+	//获取canvas元素
+	canvas.obj = document.getElementById('myCanvas');
+
+	if(canvas.obj.getContext) {
+
+		//获取渲染上下文
+		canvas.ctx = canvas.obj.getContext('2d');
+
+		//设置画布大小为屏幕宽高
+		canvas.w = canvas.obj.width = document.body.clientWidth;
+		canvas.h = canvas.obj.height = document.body.clientHeight;
+
+		//新建一个image对象
+		var img = new Image();
+
+		//图像加载完后
+		img.onload = function() {
+			//把图像信息保存在image里面
+			image.obj = img;
+			image.w = img.width;
+			image.h = img.height;
+			image.x = parseInt(canvas.w/2 - image.w/2);
+			image.y = 200;
+
+			//把图像绘制到画布坐标为(100,100)的地方
+			canvas.ctx.drawImage(image.obj,image.x,image.y,image.w,image.h);
+
+			image.imageData = canvas.ctx.getImageData(image.x,image.y,image.w,image.h);
+
+			//计算出符合要求的像素
+			calculate();
+
+			//计算后绘到画布上
+			requestAnimationFrame(draw);
+		};
+
+		//设置image的source
+		img.src = './ytxlogo-new.png';
+	}
+
+
+//计算并保存坐标
+function calculate() {
+	var len = image.imageData.length;
+	//只保存150行，100列的像素值
+	var cols = 160,
+		rows = 30;
+	//设成150行，100列后每个单元的宽高
+	var s_width = parseInt(image.w/cols),   
+		s_height = parseInt(image.h/rows);
+	var pos = 0; //数组中的位置
+	var par_x, par_y;  //粒子的x,y坐标
+	var data = image.imageData.data;  //像素值数组
+	var now = new Date().getTime();  //获取当前时间毫秒值
+	for(var i = 0; i < cols; i++) {
+		for(var j = 0; j < rows; j++) {
+			//计算(i,j)在数组中的R的坐标值
+			pos = (j*s_height*image.w + i*s_width)*4;
+			//判断像素透明度值是否符合要求
+			if(data[pos+3] > 0){
+				var particle = {
+					//x,y值都随机一下
+					x: image.x + i*s_width ,
+					y: image.y + j*s_height ,
+					flotage: false,
+				}
+				// 根据图像不同的色值来设定粒子色值
+				/*if(data[pos+1] < 175 && data[pos+2] < 10) {
+					particle.fillStyle = '#ffa900';
+				} else if(data[pos+1] < 75 && data[pos+1] > 50) {
+					particle.fillStyle = '#ff4085';
+				} else if(data[pos+1] < 220 && data[pos+1] > 190) {
+					particle.fillStyle = '#00cfff';
+				} else if(data[pos+1] < 195 && data[pos+1] > 175) {
+					particle.fillStyle = '#9abc1c';
+				}*/
+
+				if(i%5 == 0 && j%5 == 0) {
+					particle.flotage = true;
+					particle.fillStyle = '#01adff';
+					//保存开始坐标
+					particle.startX = particle.x;
+					particle.startY = particle.y;
+					//动画执行时间和结束时间
+                    particle.startTime = now + Math.random() * 20 * 1000;
+                    particle.killTime = now + Math.random() * 35*1000;
+                    //x,y方向的移动速度
+					particle.speedX = (Math.random() - 0.5)*0.9;
+                    particle.speedY = (Math.random() - 0.5)*0.9;
+				}
+
+				//符合要求的粒子保存到数组里
+				particles.push(particle);
+			}
+		}
+	}
+}
+
+//绘图案
+function draw() {
+	//清空画布					
+	canvas.ctx.clearRect(0,0,canvas.w,canvas.h);
+	var len = particles.length;
+	var curr_particle = null;
+	//当前时间毫秒值
+	var time = new Date().getTime();
+	canvas.ctx.drawImage(image.obj,image.x,image.y,image.w,image.h);
+	for(var i = 0; i < len; i++) {
+		curr_particle = particles[i];
+		if(curr_particle.flotage){
+			//开始漂浮
+			if(curr_particle.flotage && curr_particle.startTime < time) {
+				//改变粒子位置
+				curr_particle.x += curr_particle.speedX;
+				curr_particle.y += curr_particle.speedY;
+			} 
+			//结束时间到了
+		    if(curr_particle.killTime < time) {
+		    	//粒子位置复原
+		        curr_particle.x = curr_particle.startX;
+		        curr_particle.y = curr_particle.startY;
+		        //重新计算开始时间和结束时间
+		        curr_particle.startTime = time + parseInt(Math.random()*20)*1000;
+		        curr_particle.killTime = time + parseInt(Math.random()*35)*1000;
+		    }
+		    //设置填充颜色
+			canvas.ctx.fillStyle = curr_particle.fillStyle;
+			//绘粒子到画布上
+			canvas.ctx.fillRect(curr_particle.x,curr_particle.y,1,1);
+		}
+		
+	}
+
+	//重复绘制
+	requestAnimationFrame(draw);
+}
+}())
+
+</script>
+
+<a href="https://isux.tencent.com/canvas-particle-animation.html">转载：https://isux.tencent.com/canvas-particle-animation.html</a>
+
+</body></html>
