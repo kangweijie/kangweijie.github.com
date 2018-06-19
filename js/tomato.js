@@ -187,7 +187,7 @@ Jx().$package(function(J){
 
 			li.innerText = taskDetail;
 			$D.addClass(li,taskClassName);
-			taskListEl.insertBefore(li, taskListEl.children[0]);
+			//taskListEl.insertBefore(li, taskListEl.children[0]);
 		}
 		if(taskCount === 0){
 			var li = $D.node("li");
