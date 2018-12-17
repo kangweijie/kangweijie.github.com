@@ -1,0 +1,25 @@
+/*在ie7下背景没有显示,因为ie7不能识别background缩写中的反斜杠！！background: url(./backstage_login/login_in_01.jpg) repeat-x 50% top/cover, 100% ; */
+/*background-position:50% 比 center要绝对居中一些*/
+/*底部图片要做成div的背景，做成img宽度超过了960px,底部的滚动条会在屏幕不是最大化的时候出现！！！*/
+/*滚动条出现默认是：屏幕宽度 < content的时候出现。*/
+/*cover：保持图像纵横比并将图像完全覆盖定位区域的最小大小。contain:保持图像的纵横比并将图像缩放成适合背景定位区域的最大. */
+/*background-size:cover ？  background-size:100% 100%,缩小页面的时候会压缩背景。*/
+/*每个浏览器默认的z-index不一样，所以写z-index 弄成正数*/
+/*解决输入框光标在ie下不居中，字高等于输入框的高，视高其他部分用padding来填充*/
+/*全屏背景兼容ie7,repeat-x  ;居中用50%;缩小页面，不缩小背景用cover！*/
+body{background: url(./backstage_login/login_in_01.jpg) repeat-x 50% top;background-size:cover; }
+.floor_bg{position: absolute;width:100%;bottom: 0px;}
+.log_face{width: 400px;height: 332px;border: 1px solid #eee;background: #fff;border-radius: 10px;margin: 250px auto;overflow: visible;position: relative;z-index: 99;}
+.log_icon{width:100px;height:100px;background:url(./backstage_login/log_icon.png) no-repeat;position: absolute;left: 50%;top: -50px;margin-left:-50px;}
+/*ie7下 margin-top没有生效。解决方案：将先前的标签从h2换成了img,把背景图片，做成了图片显示。如果是因为没有布局导致，那可以考虑给父容器加一个激活布局zoom：1*/
+.log_title{width:305px;height:22px;margin-top: 60px;margin-left:48px;}
+input.com_input{outline:none;width:263px;height:15px;padding-top:14px;padding-bottom:16px;border: 1px solid #e4e4e4;border-radius: 3px;padding-left: 53px;margin-left:40px;margin-top: 20px; }
+.account_icon{background:url(./backstage_login/account.png) no-repeat 3% 50%;}
+.password_icon{background:url(./backstage_login/password.png) no-repeat 3% 50%;}
+/*开始写成.com_input:focus由于权限不够，下面的focus没有生效*/
+.log_face input.com_input:focus{border: 1px solid #b3d465 ;outline: none; box-shadow: none;}
+.log_button{width: 318px;height: 45px;background: #22ac38;text-align: center;font: 18px "Microsoft yahei";color: #fff;margin-top: 20px;margin-left: 40px;border: none;border-radius: 5px;}
+.comp_icon{width:120px;height:30px;background:url(./backstage_login/comp_icon.png) no-repeat;position: absolute;left: 50%;bottom: -55px;margin-left:-60px;}
+.floor_div{width:100%;height:486px;position: absolute;bottom: 0px;background:url(./backstage_login/floor.png) no-repeat 50% bottom;z-index: 9;}
+.bottom_span{position: absolute;left: 50%;bottom: 25px;margin-left:-180px;font: 14px "Microsoft yahei" ;color: #999;}
+

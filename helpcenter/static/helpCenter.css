@@ -1,0 +1,277 @@
+.clearfix{clear: both;}
+.main{width: 960px;margin:0 auto;}
+.fl{float:left;}
+.fr{float: right;}
+.clear_in:after{content: ",";height: 0;display:block;overflow: hidden;visibility: hidden;clear: both;}
+/* 测试边框*/
+.b{border:1px solid red;}
+/*合作banner图片*/
+.links_banner{width: 960px;height: 222px;padding-top: 35px} 
+/*常用自助服务*/
+.common_service{
+	padding-top: 35px;
+}
+.common_title{
+	height: 18px;
+	line-height: 16px;
+	border-left: 2px solid #14aeed;
+	padding-left: 10px;
+	margin-bottom: 24px;
+	background: url(./helpCenter/gradient_bg.jpg) no-repeat 135px 0;
+}
+.tt_span{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Microsoft yahei";
+	vertical-align: middle;
+}
+/*渐变的背景 -webkit-linear-gradient*/
+.gray_line{
+	margin-left: 10px;
+	display: inline-block;
+	height: 18px;
+	width: 285px;
+	background: url(./helpCenter/gradient_bg.jpg) no-repeat;
+	vertical-align: middle;
+}
+.common_content{
+
+}
+/*5个li元素*/
+.content_ul{
+	border-right: 1px solid #ededed;
+	display: inline-block;
+}
+.content_li{
+	height: 53px;
+	border: 1px solid #ededed;
+	border-right: none;
+	width: 160px;
+	padding: 20px;
+	padding-right: 10px;
+	float: left;
+}
+.content_ul li img{
+	float: left;
+}
+/*页面的主题蓝色#14aeed*/
+div.pic_right_div a:hover{
+	color: #14aeed;
+	text-decoration: none;
+}
+.pic_right_div{
+	height: 34px;
+	width: 105px;
+	line-height: 18px;
+	float: right;
+	margin-top: 8px;
+}
+.pic_right_a{
+	font-size: 14px;
+	color: #333;
+}
+.pic_right_i{
+	 
+	font-size: 12px;
+	color: #999;
+}
+/*content-box属性在ie9以后的浏览器不兼容*/
+.hot_question{
+	padding-top: 35px;
+}
+/*  左边栏*/
+.hot_left{
+	float: left;
+	width: 193px;
+}
+/*热门问题分类背景*/
+.q_c_bg{
+	height: 60px;
+	background: url(./helpCenter/tip_bg.png) no-repeat;
+	text-align: center;
+	line-height: 60px;
+	font-size: 18px;
+	font-family: "Microsoft yahei";
+	color: #000;
+}
+/*热门问题分类 div样式*/
+h2.q_c_content{
+	margin-top: -4px;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	font-family: "Microsoft yahei";
+	color:#14aeed;
+	font-size: 14px;
+	border:1px solid #eee;
+	border-top: none;
+	cursor: pointer;
+	position: relative;
+	background: url(./helpCenter/close_arrow.png) no-repeat 95% 50%;
+}
+/*修改页面图片: 背景用切换类实现; 图片用js修改img的attr("src","./..")*/
+/*通过js来切换背景，先换箭头图标，在隐藏和显示；背景可以通过百分比来定位具体的位置；新增的背景类，要有背景的所有属性；*/
+h2.profess_bg{
+	background: url(./helpCenter/open_arrow.png) no-repeat 95% 50%;
+}
+/*h2右侧小箭头样式*/
+h2.q_c_content img{
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+/*div同级 无序列表样式*/
+div.odiv  ul{
+	display: none;
+}
+div.odiv ul.disp_block{
+	display: block;
+}
+div.odiv ul li{
+	background-color: #fbfbfb;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	font-family: "Microsoft yahei";
+	color:#14aeed;
+	border:1px solid #eee;
+	/*border-top: 1px dashed #e7e7e7;*/
+	border-top: none;
+	border-bottom: 1px dashed #e7e7e7;
+}
+div.odiv ul li a{
+	font-size: 12px;
+	color: #666;
+	text-decoration: none;
+}
+div.odiv ul li a:hover{
+	color: #14aeed;
+	text-decoration: underline;
+}
+/*左边栏 下部div*/
+.telephone{    
+	/*border-bottom: 1px dashed #eee;*/
+	border:1px solid #eee;
+	border-top:2px solid #00a3eb;
+	margin-top: 20px;
+}
+/*电话客服*/
+.tel_serv{
+	height: 68px;
+	background:url(./helpCenter/px_bg.png) ;
+}
+.span_tel_serv{
+	font-size: 12px;
+	color: #333;
+	margin-top: 10px;
+	margin-left: 16px;
+	display: inline-block;
+}
+.tel_num{
+	color: #00a3eb;
+	font-size: 24px;
+	margin-top: 5px;
+	margin-left: 16px;
+}
+/*服务时间*/
+.serv_time{
+	height: 22px;
+	background:url(./helpCenter/serv_time.png) no-repeat ;
+	margin: 10px 0 15px 50px;
+}
+.oneToFive{
+	border-bottom: 1px dashed #ebebeb;
+	width: 161px;
+	margin-left: 16px;
+	padding-bottom: 12px;
+}
+.span_14{
+	font-size: 14px;
+	color: #000;
+}
+.i_12{
+	font-size: 12px;
+	color:#999;
+}
+.H_time{
+	font-size: 14px;
+	color: #666;
+	padding-top: 5px;
+	margin-right: 7px;
+}
+.satToSun{
+	width: 161px;
+	margin-left: 16px;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+/*右边栏*/
+.hot_right{
+	float: right;
+	width: 745px;
+	height: 545px;
+	border:1px solid #eee;
+}
+/*右边栏 面包屑导航  标题*/
+.cont_title{
+	padding:15px; 
+	padding-left:18px; 
+	height: 15px;
+	line-height: 15px;
+	border-bottom:1px solid #f5f5f5;
+}
+.cont_title a{
+	vertical-align: middle;
+	font-size: 12px;
+	color: #666;
+}
+.cont_title a:hover{
+	color: #14aeed;
+}
+.cont_title img{
+	vertical-align: middle;
+ 	height:11px;
+ 	width: 6px;
+ 	margin: 0 12px 0 15px;
+}
+/*右边栏 颜色#0795d4 字体14px  内容*/
+.cont_content{
+	padding:22px 75px 32px 32px;
+}
+.cont_content ul{
+	color: #0795d4;
+}
+.cont_content ul li{
+	line-height: 35px;
+	height: 35px;
+}
+.cont_content li a{
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	color: #0795d4;
+	font-family: "Microsoft yahei";
+}
+
+/*单个问题 页面2*/
+.sig_title{
+	color: #00a3eb;
+	font-size: 14px;
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+.title_2{
+	font-size: 12px;
+	color: #666;
+	line-height: 25px;
+}
+.ddp_no{
+	display: none;
+}
+
+
+
+
+ 

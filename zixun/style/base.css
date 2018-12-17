@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*================Reset styles start================*/
+html,body,article,header,nav,footer,section,aside,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,img,span,i,a,em,strong,b,input,textarea,br,select { margin:0; padding:0; }
+i,em {font-weight:normal; font-style:normal; }
+body { font-family:"microsoft yahei",verdana,arial,\5b8b\4f53, tahoma,'Hiragino Sans GB',sans-serif; font-size: 12px;  }
+li { list-style:none; }
+a,img,input { border:0 none; }
+a { text-decoration:none; outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0); }
+a:hover { text-decoration:none; }
+a:focus,input:focus { outline:0 none;}
+textarea { resize:none; font-size:12px; } /*去掉火狐和谷歌浏览器的Textarea改变尺寸大小功能*/
+input[type="text"],input[type="submit"],input[type="button"],textarea {-webkit-appearance: none;}
+.hide { display:none;}
+.fl { float:left;}
+.fr { float:right;}
+.clearfix:after { content:" "; display:block; clear:both; height:0; }
+.clearfix { zoom:1; }
+.cf{overflow: hidden;}
+.v-hidden{visibility: hidden;}
+
+.pr {position:relative;}
+.pa{position: absolute;}
+.block{display: block;}
+.inblo{display:inline-block;}
+.tl{ text-align: left;}
+.tc{ text-align: center;}
+.tr{ text-align: right;}
+
+.w{width:100%;}
+.h{height:100%;}
+.vm{ vertical-align: middle;}
+.fb{font-weight: bold;}
+.fn{font-weight: normal;}
+.t2 {text-indent: 2rem}
+
+.fs12 { font-size:12px; }
+.fs13 { font-size:13px;}
+.fs14 { font-size:14px; }
+.fs15 { font-size:15px; }
+.fs16 { font-size:16px; }
+.fs18 { font-size:18px; }
+.fs20 { font-size:20px; }
+.unl { text-decoration: underline;}
+.no_unl{text-decoration: none;}
+

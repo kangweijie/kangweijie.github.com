@@ -1,0 +1,59 @@
+.main_content{width: 960px;margin: 0 auto;overflow:hidden;}
+.sorry_tip{width: 400px;margin: 0 auto;overflow:hidden}
+.sorry_tip h1{font:22px/24px "Microsoft yahei";display: inline-block;color:#22d1c2;width: 400px;padding-left: 50px;height: 30px;background:url(./page_404/little_car.png) no-repeat;}
+.animation_404{width:500px;height: 295px;margin: 0 auto; margin-top: 95px;background:#fff;}
+.nav_bar{width: 445px;margin: 30px auto 0 auto;overflow: hidden;}
+.nav_bar ul{width: 115%;}
+.nav_bar ul li{float:left;text-align: center;line-height: 30px;margin-right: 52px;}
+.nav_bar ul li a {color:#666;display:block;}
+.nav_bar ul li a:hover{color:#000;}
+.common_bg{display:block;width:72px;height:75px;font-size:12px;text-align:center;background:url(./page_404/eight_icon.png) no-repeat;
+		transition:transform .8s;
+		-webkit-transition:-webkit-transform .8s;
+		transform:rotate3D(0,1,0,-180deg);
+		-webkit-transform:rotate3D(0,1,0,-180deg);}
+.nav_bar ul li a:hover .common_bg{
+		transform:rotate3D(0,1,0,0deg);
+		-webkit-transform:rotate3D(0,1,0,0deg);
+}
+ul li a i.first_in_four{background-position:1px 0;}
+ul li a i.second_in_four{background-position:-71px 0;}
+ul li a i.third_in_four{background-position:-143px 0;}
+ul li a i.four_in_four{background-position:-216px 0;}
+ul li a:hover i.first_in_four{background-position:1px -78px;}
+ul li a:hover i.second_in_four{background-position:-71px -78px;}
+ul li a:hover i.third_in_four{background-position:-143px -78px;}
+ul li a:hover i.four_in_four{background-position:-217px -78px;}
+
+.movefromUp{
+	-webkit-animation: moveFromLeft .8s ease both;
+	animation: moveFromLeft .8s ease both;
+}
+@-webkit-keyframes moveFromLeft {
+	0% { -webkit-transform: translateY(-100%);opacity: 0;}
+	20% { -webkit-transform: translateY(0%);opacity: 1;}
+	40% { -webkit-transform: translateY(-35%);opacity: 1;}
+	60% { -webkit-transform: translateY( 0%);opacity: 1;}
+	80% { -webkit-transform: translateY(-5%);opacity: 1;}
+	100%{-webkit-transform: translateY(0%);opacity: 1;}
+
+}
+@keyframes moveFromLeft{
+	0% { -webkit-transform: translateY(-100%); transform: translateY(-100%);opacity: 0;}
+	20% { -webkit-transform: translateY(0%);transform: translateY(0%);opacity: 1;}
+	40% { -webkit-transform: translateY(-35%); transform: translateY(-35%);opacity: 1;}
+	60% { -webkit-transform: translateY( 0%);transform: translateY( 0%);opacity: 1;}
+	80% { -webkit-transform: translateY(-5%);transform: translateY(-5%);opacity: 1;}
+	100%{-webkit-transform: translateY(0%);transform: translateY(0%);opacity: 1;}
+
+}
+.movefromBottom{
+	-webkit-animation: moveFromBottom 2.4s ease both;
+	animation: moveFromBottom 2.4s ease both;
+}
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%);opacity: 0;}
+}
+.delay_8{animation-delay:.8s;-webkit-animation-delay:.8s;}
+.delay_16{animation-delay:1.6s;-webkit-animation-delay:1.6s;}
+.delay_28{animation-delay:2.8s;-webkit-animation-delay:2.8s;}
