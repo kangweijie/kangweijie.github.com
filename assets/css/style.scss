@@ -4,6 +4,10 @@
 @import "{{ site.theme }}";
 
 header{padding:0;}
+.css-nav{
+    max-width: 1000px;
+    margin: 0 auto;
+}
 .pos-rel{position: relative;}
 .css-side-bg{
     opacity:.1;
@@ -31,7 +35,7 @@ ul.css-menu-ul li{
     font-weight: 300;
     color: #666;
     position: absolute;
-    bottom:0px;
+    bottom:-5px;
     right:75px;
 }
 .css-menu-img{
