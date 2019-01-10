@@ -14,6 +14,17 @@ body{
     height: calc(100% - 20px);
 }
 header{padding:0;}
+.css-cnt{
+    height: 100%;
+    padding-top: 200px;
+    margin-top: -200px;
+}
+#main_content{
+    background-color:#444;
+    height:100%;
+    border-radius: 10px;
+    color:#fff;
+}
 footer{
     position: absolute;
     bottom:0;
