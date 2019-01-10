@@ -3,8 +3,29 @@
 
 @import "{{ site.theme }}";
 
+*{
+    box-sizing: border-box;
+}
+html{    
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: calc(100% - 20px);
+}
 header{padding:0;}
-.css-nav{
+footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:60px;
+    border-top: 1px dashed #b5e853;
+    padding:10px;
+    text-align: center
+}
+.css-nav,.css-foot-content{
     max-width: 1000px;
     margin: 0 auto;
 }
