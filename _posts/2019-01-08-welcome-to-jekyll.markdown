@@ -4,22 +4,26 @@ title:  "Hello World!"
 date:   2019-01-08 14:46:19 +0800
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ 
+ 
+ <g  class="lines">
+	 <path id="path0" d="M120.000 158.000 L 120.000 176.000 124.400 176.000 L 128.800 176.000 128.800 170.124 C 128.800 160.157,130.582 159.830,135.844 168.832 L 140.034 176.000 144.817 176.000 C 147.448 176.000,149.600 175.840,149.600 175.645 C 149.600 175.450,146.721 170.594,143.202 164.853 L 136.805 154.415 142.155 147.608 C 145.098 143.863,147.716 140.800,147.973 140.800 C 148.230 140.800,151.122 148.900,154.400 158.800 C 161.000 178.733,160.855 178.501,163.040 172.600 C 163.895 170.290,165.961 164.698,167.631 160.173 C 169.300 155.648,170.930 152.228,171.252 152.573 C 171.574 152.918,173.909 158.510,176.440 165.000 C 178.972 171.490,181.268 176.800,181.542 176.800 C 181.921 176.800,189.770 151.674,192.601 141.400 C 192.921 140.238,192.450 140.000,189.830 140.000 L 186.674 140.000 184.401 148.136 L 182.129 156.272 179.265 148.137 L 176.400 140.002 171.336 140.001 L 166.273 140.000 166.770 142.264 C 167.101 143.771,166.541 146.485,165.094 150.390 L 162.921 156.253 160.437 148.326 L 157.953 140.400 149.446 140.174 L 140.939 139.947 134.869 147.694 L 128.800 155.440 128.800 147.720 L 128.800 140.000 124.400 140.000 L 120.000 140.000 120.000 158.000 M208.000 153.636 C 208.000 170.876,205.015 174.849,195.709 169.995 C 192.622 168.385,192.675 168.344,192.954 172.168 C 193.249 176.204,196.024 177.237,204.577 176.496 C 215.951 175.510,216.800 174.019,216.800 155.022 L 216.800 140.000 212.400 140.000 L 208.000 140.000 208.000 153.636 " stroke-width="1.5" stroke="#f00" fill="none"></path>
+	
+	<path d="
+        M 170,160
+        m -100, 0
+        a100,100 101 1,0 200,0 
+		a100,100 101 1,0 -200,0"
+			 stroke-width="60" stroke="#feee00" fill="none"
+    />
+ 	
+ 	<path stroke-dashoffset="1000.00" stroke-dasharray="100,5" d="m9.53631,0.75c0,6 0.46048,15.21733 -5,63c-2.7625,24.17371 -5.80423,41.64886 -2,44c2.55196,1.57718 30.62372,-3.90656 50,-23c28.49146,-28.07555 28,-43 28,-50c0,-4 -3.02675,-8.22975 -4,-8c-10.88126,2.56871 -16.49829,18.93796 -17,25c-0.24744,2.98978 0,5 1,5c10,0 32.20898,2.54695 72,-2c39.36703,-4.4985 46.5582,-12.51929 50,-15c1.814,-1.30745 1.01309,0.75711 0,7c-1.28146,7.8967 -1.22626,16.83522 4,19c7.39102,3.06146 30.31546,1.23579 60,-7c31.38736,-8.70824 68.17346,-16.09973 86,-25c7.69641,-3.84259 7.01022,-3.95911 8,8c0.50171,6.06204 2.4588,10.69344 3,12c0.38269,0.92387 4.18863,3.26151 15,1c21.66699,-4.53227 39.92517,-6.50029 45,-13c0.61542,-0.78821 0.78735,2.00755 1,5c2.50629,35.26639 6.38348,53.08002 5,65c-2.01343,17.34781 -12.21292,40.41837 -21,56c-11.03864,19.57419 -21.82376,26.48627 -24,27c-1.9465,0.4595 -9.32785,-9.68164 -20,-21c-16.52182,-17.52225 -34.00082,-37.5831 -42,-51c-5.51544,-9.25095 -6,-13 -6,-16l0,-3" id="svg_6" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path d="m372.53631,2.75c1,0 20.39645,9.1617 38,18c16.40588,8.23698 31,16 36,16l1,0" id="svg_7" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+	</g>
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+</svg>
+ <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+ <script src="/assets/js/anime.js"></script>
