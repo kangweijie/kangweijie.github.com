@@ -97,6 +97,7 @@ Jx().$package(function(J){
 			var progress = remainTime / (planTime/1000);
 			console.log("progress:"+progress);
 			remainTimeEl.innerText = nH+":"+nM+":"+nS;
+			document.title = nH+":"+nM+":"+nS;
 			progressBar.style.width = (500*progress)+"px";
 			console.log(progressBar.style.width);
 			if(remainTime===0){
